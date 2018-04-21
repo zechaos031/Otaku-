@@ -132,4 +132,18 @@ client.on('error', e => {
   console.log(chalk.bgRed(e.replace(regToken, 'qui a été expurgé')));
 });
 
+client.on('message', message => {
+
+if (message.content === config.prefix + "onmain") {
+ if(message.author.id == "234312981524119562"){
+        message.channel.bulkDelete (1)
+    bot.user.setStatus( 'idle' );
+    bot.user.setActivity('EN MAINTENANCE');
+        message.channel.send ("En cours de modification \n`en absence` et `EN MAINTENANCE`")
+} else {
+      message.channel.send("**Erreur** ! Tu n'es pas l'owner")
+    }
+  }
+});
+
 client.login(process.env.TOKEN)
