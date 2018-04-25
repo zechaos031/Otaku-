@@ -13,7 +13,7 @@ const grencolor = chalk.keyword('green');
 const cyancolor = chalk.keyword('cyan');
 const bluecolor = chalk.keyword('blue');
 
-
+//test
 const log = message => {
   console.log(`[${moment().format('HH:mm:ss')}] ${message}`);
 };
